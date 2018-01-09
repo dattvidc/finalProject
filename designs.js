@@ -14,6 +14,13 @@ console.log(colorPick);
 
 // When size is submitted by the user, call makeGrid()
 
+
+$("#input").on("click", function() {
+  
+  
+} )
+
+
 function makeGrid() {
 
     // Your code goes here!
