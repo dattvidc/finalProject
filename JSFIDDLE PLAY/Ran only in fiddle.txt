@@ -1,0 +1,23 @@
+var submitButton = $('button');
+var gridCanvas = $('.grid');
+var resetButton = $('#reset');
+
+submitButton.click(function makeGrid(){
+  var gridWidth = $('#grid-width').val();
+  var gridHeight = $('#grid-heigth').val();
+  for( var j = 1; j <= gridHeight; j++){
+    var gridTr = $(gridCanvas).prepend('<tr></tr>');
+    for(var i = 1; i <= gridWidth; i++){
+      var gridTd = $(gridTr).prepend('<td class="cell"></td>');
+    }
+  }
+});
+
+$('.grid').on('mousedown','.cell', function(){
+  var color = $('#choose-color').val();
+  $(this).css('background-color', color);
+});
+
+resetButton.click(function(){
+  location.reload();
+});
