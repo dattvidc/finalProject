@@ -1,26 +1,39 @@
-var submitButton = $('button');
-var gridCanvas = $('.grid');
-var resetButton = $('#reset');
 
-submitButton.click(function makeGrid(){
-  var gridWidth = $('#grid-width').val();
-  var gridHeight = $('#grid-heigth').val();
-  for( var j = 1; j <= gridHeight; j++){
-    var gridTr = $(gridCanvas).prepend('<tr></tr>');
-    for(var i = 1; i <= gridWidth; i++){
-      var gridTd = $(gridTr).prepend('<td class="cell"></td>');
-    }
+  var grid=$("#pixel_canvas");
+  var submitButton=$('input[type="submit"]');
+
+function makeGrid() {
+
+  var height=$('#input_height').val();
+  var width=$('#input_width').val();
+
+  grid.children().remove();
+  //make rows
+  for(  x=0; x<height; x++){
+      grid.append('<tr></tr>');
   }
+  //make columns in each rows
+  var row=$('tr');
+
+  for(  y=0; y<width; y++){
+      row.append('<td></td>');
+  }
+
+}
+
+function fillIn(event) {
+   var color = $('#colorPicker').val();
+  $(event.target).css('backgroundColor', color);
+ }
+
+
+submitButton.click(function(event) {
+  event.preventDefault();
+  makeGrid();
 });
 
-$('.grid').on('mousedown','.cell', function(){
-  var color = $('#choose-color').val();
-  $(this).css('background-color', color);
-});
+grid.on('click','td', fillIn);
 
-resetButton.click(function(){
-  location.reload();
-});
 
 // not fiddle codepen
 
