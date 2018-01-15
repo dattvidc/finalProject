@@ -15,7 +15,6 @@ $(document).ready(function() {
 
     $(":submit").click(function(event) {
         event.preventDefault();
-
         makeGrid();
 
     });
@@ -28,12 +27,11 @@ $(document).ready(function() {
 
         //write the grid
         for (var x = 0; x < h; x++) {
-            for (var y = 0; y < w; y++) {
+           
+            gridz.append("<tr> </tr>");
+        }  for (var y = 0; y < w; y++) {
                 gridz.children().append("<td> </td>");
             }
-            gridz.append("<tr> </tr>");
-        }
-
         // Your code goes here!
 
         $("pixel_canvas").children().addclass("canvas");
