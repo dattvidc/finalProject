@@ -1,45 +1,41 @@
-// Select color input
-
-var colorInput = $(colorPicker);
-//console.log(colorInput);
-// Select size input
-var heightInput = $("#input_height").val();
-//console.log(heightInput);
-var widthInput = $("#input_width").val();
-//console.log(widthInput);
-// Select table element to create Grid
-var grid = $("#pixel_canvas");
-
-/*
-When size is submitted by the user, call makeGrid()
-*/
-
-$("#submit_button").click(function() {
-    makeGrid();
-
-})
+$(document).ready(function() {
 
 
-// The makeGrid() function
 
-function makeGrid() {
-    var row = heightInput;
-    var column = widthInput;
+    // Select color input
+    // Select size input
 
-    //CleanSlate - del all previous
-    grid.children().remove();
+    var h = $('#input_height').val();
+    var w = $('#input_width').val();
 
-    //actually making the grid
-    for (var i = 0; i < row; i++) {
 
-        grid.append("<tr></tr>");
+    var gridz = $("#pixel_canvas");
+
+    // When size is submitted by the user, call makeGrid()
+
+    $(":submit").click(function(event) {
+        event.preventDefault();
+
+        makeGrid();
+
+    });
+
+
+
+    function makeGrid() {
+        //Re-set in case of already existing grid
+        gridz.children().remove();
+
+        //write the grid
+        for (var x = 0; x < h; x++) {
+            for (var y = 0; y < w; y++) {
+                gridz.children().append("<td> </td>");
+            }
+            gridz.append("<tr> </tr>");
+        }
+
+        // Your code goes here!
+
+        $("pixel_canvas").children().addclass("canvas");
     }
-
-    for (var n = 0; n < column; n++) {
-
-        grid.children().append("<td></td>");
-
-
-    }
-
-}
+});
