@@ -5,8 +5,7 @@ $(document).ready(function() {
     // Select color input
     // Select size input
 
-    var h = $('#input_height').val();
-    var w = $('#input_width').val();
+   
 
 
     var gridz = $("#pixel_canvas");
@@ -25,6 +24,9 @@ $(document).ready(function() {
         //Re-set in case of already existing grid
         gridz.children().remove();
 
+
+        var h = $('#input_height').val();
+        var w = $('#input_width').val();
         //write the grid
         for (var x = 0; x < h; x++) {
            
