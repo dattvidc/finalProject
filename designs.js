@@ -6,8 +6,7 @@ $(document).ready(function() {
     // Select size input
 
    
-
-
+    var colorMe = $('#colorPicker');
     var gridz = $("#pixel_canvas");
 
     // When size is submitted by the user, call makeGrid()
@@ -40,8 +39,14 @@ $(document).ready(function() {
     }
     
 //add event listeners to Grid
-$("#pixel_canvas").children().addclass("canvas");
-    
+$("#pixel_canvas").children().addClass("canvas");   
+
+    $("#canvas").on( "click", "td", function() {
+         $("#canvas").css("background-color", "colorMe");
+    });
+//function draw(){
+   // $(this).css("background-color", colorMe);
+//}
     
     
 });
