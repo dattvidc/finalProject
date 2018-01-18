@@ -22,7 +22,7 @@ $(document).ready(function() {
 
     function makeGrid() {
         //Re-set in case of already existing grid
-        gridz.children().remove();
+        gridz.children().remove(); //could make if else...seems like overkill
 
 
         var h = $('#input_height').val();
@@ -40,7 +40,7 @@ $(document).ready(function() {
     }
     
 //add event listeners to Grid
-$("pixel_canvas").children().addclass("canvas");
+$("#pixel_canvas").children().addclass("canvas");
     
     
     
