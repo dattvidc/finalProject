@@ -36,6 +36,12 @@ $(document).ready(function() {
             }
         // Your code goes here!
 
-        $("pixel_canvas").children().addclass("canvas");
+        
     }
+    
+//add event listeners to Grid
+$("pixel_canvas").children().addclass("canvas");
+    
+    
+    
 });
