@@ -43,8 +43,8 @@ $(document).ready(function() {
 //add event listeners to Grid
  
 
-    $("td").on( "click", "td", function() {
-         $("td").css("background-color", colorMe);
+  $(".canvas").on( "click", "td", function() {
+    $(".canvas").css("background-color", "yellow");
     });
 //function draw(){
    // $(this).css("background-color", colorMe);
