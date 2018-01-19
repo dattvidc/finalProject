@@ -32,17 +32,19 @@ $(document).ready(function() {
             gridz.append("<tr> </tr>");
         }  for (var y = 0; y < w; y++) {
                 gridz.children().append("<td> </td>");
-            }
+            $("tr").children().addClass("canvas"); 
+            } 
+        
         // Your code goes here!
-
+ 
         
     }
     
 //add event listeners to Grid
-$("#pixel_canvas").children().addClass("canvas");   
+ 
 
-    $("#canvas").on( "click", "td", function() {
-         $("#canvas").css("background-color", "colorMe");
+    $("td").on( "click", "td", function() {
+         $("td").css("background-color", colorMe);
     });
 //function draw(){
    // $(this).css("background-color", colorMe);
