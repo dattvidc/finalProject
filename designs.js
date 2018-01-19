@@ -40,14 +40,16 @@ $(document).ready(function () {
         
         // Your code goes here!
  function tdDraw() {
-     console.log("it executed a1");
-      $(this).css("background-color", "yellow");
+     console.log("it executed tdDraw");
+      $(this).css("background-color", "blue");
   }
     
 //add event listeners to Grid
  $(".canvas").click(function() {
-        tdDraw();
-     console.log("this far b1")
+
+     $(this).css("background-color", colorMe.val());
+     //tdDraw();
+     console.log("canvas listener")
  });
         
     }
