@@ -41,11 +41,13 @@ $(document).ready(function() {
     }
     
 //add event listeners to Grid
- 
-
-  $(".canvas").on( "click", "td", function() {
-    $(".canvas").css("background-color", "yellow");
+ $(".canvas").on('mousedown', 'td', function() {
+   $(this).css("background-color", "yellow");
     });
+
+ // $(".canvas").click( function() {
+   // this.css("background-color", "yellow");
+   // });
 //function draw(){
    // $(this).css("background-color", colorMe);
 //}
