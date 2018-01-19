@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
 
 
@@ -35,16 +35,28 @@ $(document).ready(function() {
             $("tr").children().addClass("canvas"); 
             } 
         
+        
+        
+        
         // Your code goes here!
- 
+ function tdDraw() {
+     console.log("it executed a1");
+      $(this).css("background-color", "yellow");
+  }
+    
+//add event listeners to Grid
+ $(".canvas").click(function() {
+        tdDraw();
+     console.log("this far b1")
+ });
         
     }
     
-//add event listeners to Grid
- $(".canvas").on('mousedown', 'td', function() {
-   $(this).css("background-color", "yellow");
-    });
-
+//declare the draw function
+  
+    
+    
+    
  // $(".canvas").click( function() {
    // this.css("background-color", "yellow");
    // });
