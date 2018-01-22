@@ -6,8 +6,8 @@ $(document).ready(function() {
             // Select size input
 
 
-            var colorMe = $('#colorPicker');
-            var gridz = $("#pixel_canvas");
+            const colorMe = $('#colorPicker');
+            const gridz = $("#pixel_canvas");
 
             // When size is submitted by the user, call makeGrid()
 
@@ -24,8 +24,8 @@ $(document).ready(function() {
                 gridz.children().remove(); //could make if else...seems like overkill
 
 
-                var h = $('#input_height').val();
-                var w = $('#input_width').val();
+                const h = $('#input_height').val();
+                const w = $('#input_width').val();
                 //write the grid
                 for (var x = 0; x < h; x++) {
 
@@ -39,17 +39,10 @@ $(document).ready(function() {
 
 
 
-                // Your code goes here!
-                //function tdDraw() {
-                // console.log("it executed tdDraw");
-                //   $(this).css("background-color", "blue");
-                //}
-
                 //add event listeners to Grid
                 $(".canvas").click(function() {
 
                     $(this).css("background-color", colorMe.val());
-                    //tdDraw();
                     //  console.log("canvas listener")
                 });
 
@@ -64,17 +57,7 @@ $(document).ready(function() {
 
                 });
 
-                //declare the draw function
 
-
-
-
-                // $(".canvas").click( function() {
-                // this.css("background-color", "yellow");
-                // });
-                //function draw(){
-                // $(this).css("background-color", colorMe);
-                //}
 
 
             });
