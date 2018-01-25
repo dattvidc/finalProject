@@ -27,11 +27,11 @@ $(document).ready(function() {
         const h = $('#input_height').val();
         const w = $('#input_width').val();
         //write the grid
-        for (var x = 0; x < h; x++) {
+        for (let x = 0; x < h; x++) {
 
             gridz.append("<tr> </tr>");
         }
-        for (var y = 0; y < w; y++) {
+        for (let y = 0; y < w; y++) {
             gridz.children().append("<td> </td>");
             $("tr").children().addClass("canvas");
         }
